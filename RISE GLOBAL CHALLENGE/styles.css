@@ -1,0 +1,551 @@
+* Reset some default styles */
+body, h1, h2, p, ul, li, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 500px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+/* Our Mission Section */
+/* Our Mission Section Styles */
+.mission {
+    background-color: #ffffff; /* Adjust the background color */
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+.mission h2 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-decoration: underline; /* Add underline to the heading */
+
+}
+
+.mission-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgb(0, 0, 0); /* Adjust the background color and opacity */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.mission p {
+    font-size: 18px;
+    color: #ffffff;
+}
+/* Countries We Support Section Styles */
+.countries {
+    background-color: #fff;
+    color: #000;
+    padding: 50px;
+    text-align: center;
+}
+
+.countries h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.country-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.country-list li {
+    background-color: #4CAF50; /* Adjust the background color */
+    color: #fff;
+    font-size: 18px; /* Increase the font size */
+    margin: 5px;
+    padding: 15px 20px; /* Increase padding */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    flex: 0 0 calc(25% - 10px); /* Adjust the width for 4 items on each line */
+    margin-bottom: 10px; /* Add some margin between items */
+}
+
+.country-list li:nth-child(4n+1) {
+    margin-left: 0; /* Reset margin for the first item in each row */
+}
+
+.country-list li:hover {
+    background-color: #45a049;
+}
+
+/* Our Features Section Styles */
+.features {
+    background-color: #f5f5f5;
+    padding: 50px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-decoration: underline; /* Add underline to the heading */
+}
+
+.features-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.feature {
+    flex: 1;
+    text-align: center;
+    margin: 20px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.feature:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.feature h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* How It Works Section Styles */
+.how-it-works {
+    background-color: #f5f5f5;
+    padding: 50px;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-decoration: underline; /* Add underline to the heading */
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step {
+    position: relative;
+    max-width: 600px;
+    margin: 20px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.step:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.step h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 16px;
+    color: #000000;
+}
+
+/* Arrow Animation */
+.step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 10px); /* Half of the arrow's width */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0;
+    border-color: #ccc transparent transparent;
+    transition: margin-bottom 0.5s ease-in-out;
+}
+
+.step:hover::after {
+    margin-bottom: 5px;
+}
+
+
+/* Success Stories Section Styles */
+.success-stories {
+    background-color: #f5f5f5;
+    padding: 50px;
+    text-align: center;
+}
+
+.success-stories h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-decoration: underline; /* Add underline to the heading */
+}
+
+.compliment-boxes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.compliment-box {
+    max-width: 300px;
+    margin: 15px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.compliment-box:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.compliment-box p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.compliment-box span {
+    display: block;
+    font-style: italic;
+    color: #555;
+}
+
+/* Get Started Section Styles */
+.get-started {
+    background-color: #f5f5f5;
+    padding: 50px;
+    text-align: center;
+}
+
+.get-started h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-decoration: underline; /* Add underline to the heading */
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Add margin between arrow and buttons */
+}
+
+.arrow::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #000000;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.get-started-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin: 0 10px; /* Add margin between buttons */
+}
+
+/* Add equal margin to both buttons */
+.button-container > :first-child {
+    margin-right: 100px;
+}
+
+.button-container > :last-child {
+    margin-left: 150px;
+}
+
+.get-started-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Header Styles */
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #cccbc9;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.logo h1 a {
+    text-decoration: none;
+    color: #000000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #45a049;
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    height: 500px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.floating-text-bottom {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+
+.floating-text-bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(255, 255, 255); /* Adjust the background color and opacity */
+    padding: 15px;
+    border-radius: 10px;
+    width: fit-content; /* Set the width to fit the content */
+}
+
+.floating-text-bottom p {
+    font-size: 18px;
+    color: #000000;
+    margin: 0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Add empty space after buttons */
+.empty-space {
+    height: 100px; /* Adjust the height as needed */
+}
+
+/* Add these styles to your existing styles.css file */
+
+/* Form Styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+select {
+    height: 40px; /* Match the height with input fields */
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Submit Button Styles */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional: Add styling for additional visual enhancements */
+textarea,
+select,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Optional: Add styling for form labels or other elements */
+h1.centered-heading {
+    text-align: center;
+    text-decoration: underline;
+}
+input[type="submit"] {
+    /* ... (previous styles) ... */
+    margin-bottom: 100px;}
+
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background-color: #cccbc9;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: flex-start; /* Align back button to the left */
+    align-items: center;
+}
+
+.back-button {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+/* Main Content Styles */
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+.centered-heading {
+    text-decoration: underline;
+}
+
+.orphans-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.orphan-profile {
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.orphan-profile img {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
